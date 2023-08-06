@@ -1,0 +1,410 @@
+/* - Family: [Overpass](https://fonts.google.com/specimen/Overpass?preview.text_type=custom)
+- Weights: 300, 600
+
+- Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom)
+- Weights: 400, 500, 700
+
+
+
+font-family: 'Overpass', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600&family=Ubuntu:wght@400;500;600;700;900&display=swap');
+
+/* 
+
+- 2em sides padding in main section
+
+
+
+
+*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+/* Text */
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+    color: hsl(237, 23%, 32%);
+    font-weight: 500;
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Overpass', sans-serif;
+    color: hsl(237, 23%, 32%);
+
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+/* Main Section */
+
+main {
+    height: 75vh;
+    border-bottom-left-radius: 20%;
+    
+    position: relative;
+
+    background:linear-gradient(to bottom, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    z-index: 3;
+    overflow: hidden;
+
+    /* hsl(353, 100%, 62%), hsl(13, 100%, 72%)) */
+}
+
+.hero-section_background {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-image: url(images/bg-pattern-intro-mobile.svg);
+    background-size: cover;
+    transform: scale(2.25);
+    object-fit: contain;
+  
+    left: -25px;
+    bottom: -150px;
+    z-index: -1;
+}
+
+.hero-section_content {
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    gap: 1em;
+}
+
+.hero-section_content-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.hero-section_content h1 {
+    font-family: 'Ubuntu', sans-serif;
+
+    
+    font-weight: lighter;
+
+}
+
+.hero-section_content h1, 
+.hero-section_content p {
+    color: white;
+}
+
+.main-btns1 {
+    background-color: white;
+    border-radius: 20px;
+    padding: 0.80em 1em;
+    color:  hsl(353, 100%, 62%);
+    font-weight: bolder;
+    border: none;
+
+}
+
+.main-btns2 {
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 0.80em 1em;
+    color: white;
+    font-weight: bolder;
+    border: white 1px solid;
+
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    align-items: center; 
+    gap: 2em;
+
+    padding: 2em;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1em;
+}
+
+.dropBtn {
+    border: none;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: aliceblue;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 5em;
+
+    padding: 1.5em;
+    min-width: 160px;
+
+    border-radius: 5px;
+    text-align: left;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+}
+
+.dropdown-content_two {
+    display: none;
+    position: absolute;
+    top: 5em;
+
+    padding: 1.5em;
+    min-width: 160px;
+
+    border-radius: 5px;
+    text-align: left;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+}
+
+.dropdown-content_three {
+    display: none;
+    position: absolute;
+    top: 5em;
+
+    padding: 2em 1.5em;
+    min-width: 160px;
+
+    border-radius: 5px;
+    text-align: left;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+}
+
+
+.dropdown-content.show,
+.dropdown-content_two.show,
+.dropdown-content_three.show {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+
+.anchor a {
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+.invert {
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Top Section */
+
+.top {
+    margin: 5em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.top img {
+    width: 100%;
+}
+
+.top-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+    padding: 0 2em;
+}
+
+.top-text p {
+    margin-top: 1em;
+}
+
+
+/* Middle */
+
+.middle {
+    
+
+    position: relative;
+    margin-top: 15em;
+
+   
+
+}
+
+.middle-background {
+    background-color: hsl(237, 17%, 21%);
+    width: 100%;
+    height: 100vh;
+
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.middle-text {
+    position:absolute;
+    bottom: 10em;
+    padding: 0 2em;
+
+    z-index: 2;
+}
+
+.middle-text h2,
+.middle-text p {
+    color: white;
+    
+}
+
+.middle-text h2 {
+    font-size: 2rem;
+}
+
+.middle-text p {
+    margin-top: 1.5em;
+
+}
+
+.middle-image_circle {
+    position: absolute;
+    width: 580px;
+    z-index: 1;
+
+    top: -32em;
+    transform: translate(-50%, 50%);
+
+}
+
+.middle-image_phone {
+    position: absolute;
+    top: -24em;
+    z-index: 3;
+
+    transform: translate(-50%, 50%);
+} 
+
+
+/* Bottom */
+
+.bottom {
+    margin: 7em 0;
+}
+
+.bottom-text {
+    padding: 0 2em;
+    text-align: center;
+}
+
+.bottom-text p,
+.bottom-text h2 {
+    margin-top: 1.5em;
+    
+}
+
+/* Footer */
+
+footer {
+    background-color: hsl(240, 10%, 16%);
+    padding: 4em;
+    border-top-right-radius: 90px;
+}
+
+footer img {
+    max-width: 40%;
+    margin-bottom: 6em;
+}
+
+.footer-text {
+    color: hsl(240, 2%, 79%);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.footer ul {
+    padding: 0;
+
+}
+
+.footer h4 {
+    margin-bottom: 1em;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
