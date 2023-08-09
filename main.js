@@ -1,4 +1,12 @@
 
+
+
+
+function toggleMenu() {
+    let menu = document.getElementById('nav-menu');
+    menu.classList.toggle('active');
+}
+
 function productBtn() {
     let productDropdown = document.getElementById('productDropdown');
     productDropdown.classList.toggle('show');
@@ -30,9 +38,6 @@ function connectBtn() {
     rotate.classList.toggle('invert')
 }
 
-
-
-
 /*
 function myFunction() {
     let productDropdown = document.getElementById('productDropdown');
@@ -59,18 +64,16 @@ window.onclick = function(e) {
 
     if (!e.target.matches('.connectButton')) {
         let connectDropdown = document.getElementById('connectDropdown');
-        const rotate = document.getElementById('rotate')
+        // const rotate = document.querySelector('.rotate3')
 
         if (connectDropdown.classList.contains('show')) {
             connectDropdown.classList.remove('show')
         };
 
-        // rotate.style.transform = 'rotate(0deg)'
+        rotate.style.transform = 'rotate(0deg)';
 
 
     }
 
 }
-
-
 

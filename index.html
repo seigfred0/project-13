@@ -17,6 +17,7 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -24,55 +25,69 @@
 
 
   <main class="hero-section">
+
+
     <nav class="navigation">
       <object data="images/logo.svg" type=""></object>
 
-      <div class="nav-menu">
-        <div class="dropdown">
-          <button class="dropBtn productButton" onclick="productBtn()">
-            Product
-            <img src="images/icon-arrow-light.svg" alt="" class="rotate1">
-          </button>
-          <div class="dropdown-content anchor" id="productDropdown">
-            <a href="#">Overview</a>
-            <a href="#">Pricing</a>
-            <a href="#">Marketplace</a>
-            <a href="#">Features</a>
-            <a href="#">Integrations</a>
+      <div class="nav-menu" id="nav-menu">
+        <div class="nav-menu_links">
+          <div class="dropdown">
+            <button class="dropBtn productButton" onclick="productBtn()">
+              Product
+              <img src="images/icon-arrow-light.svg" alt="" class="rotate1">
+            </button>
+            <div class="dropdown-content anchor" id="productDropdown">
+              <a href="#">Overview</a>
+              <a href="#">Pricing</a>
+              <a href="#">Marketplace</a>
+              <a href="#">Features</a>
+              <a href="#">Integrations</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropBtn companyButton" onclick="companyBtn()">
+              Company
+              <img src="images/icon-arrow-light.svg" alt="" class="rotate2">
+            </button>
+            <div class="dropdown-content_two anchor" id="companyDropdown">
+              <a href="#">About</a>
+              <a href="#">Team</a>
+              <a href="#">Blog</a>
+              <a href="#">Careers</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropBtn connectButton" onclick="connectBtn()">
+              Connect
+              <img src="images/icon-arrow-light.svg" alt="" class="rotate3">
+            </button>
+            <div class="dropdown-content_three anchor" id="connectDropdown">
+              <a href="#">Contact</a>
+              <a href="#">Newsletter</a>
+              <a href="#">LinkedIn</a>
+            </div>
           </div>
         </div>
 
-        <div class="dropdown">
-          <button class="dropBtn companyButton" onclick="companyBtn()">
-            Company
-            <img src="images/icon-arrow-light.svg" alt="" class="rotate2">
-          </button>
-          <div class="dropdown-content_two anchor" id="companyDropdown">
-            <a href="#">About</a>
-            <a href="#">Team</a>
-            <a href="#">Blog</a>
-            <a href="#">Careers</a>
-          </div>
+        <div class="nav-menu_cta">
+          <div class="nav-menu_login">Login</div>
+          <div class="nav-menu_signup">Sign Up</div>
         </div>
 
-        <div class="dropdown">
-          <button class="dropBtn connectButton" onclick="connectBtn()">
-            Connect
-            <img src="images/icon-arrow-light.svg" alt="" class="rotate3">
-          </button>
-          <div class="dropdown-content_three anchor" id="connectDropdown">
-            <a href="#">Contact</a>
-            <a href="#">Newsletter</a>
-            <a href="#">LinkedIn</a>
-          </div>
-        </div>
+      </div>
+
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
       </div>
     </nav>
 
 
 
-
     <div class="hero-section_background"></div>
+
     <div class="hero-section_content">
       <h1>A modern publishing platform</h1>
       <p>Grow your audience and build your online brand</p>
@@ -85,22 +100,25 @@
     
   <section class="top">
     <h2>Designed for the future</h2>
-    <img src="images/illustration-editor-mobile.svg" alt="">
-    <div class="top-text">
-      <div class="top-text_one">
-        <h2>Introducing an extensible editor</h2>
-        <p>
-          Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-          change the looks of a blog.
-        </p>
-      </div>
-      <div class="top-text_two">
-        <h2>Robust content management</h2>
-        <p>
-          Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-          by adding customized categories, sections, format, or flow. With this functionality, you're in full control.</p>
+    <div class="top-desktop">
+      <img src="images/illustration-editor-desktop.svg" alt="" class="desktop">
+      <img src="images/illustration-editor-mobile.svg" alt="" class="mobile">
+      <div class="top-text">
+        <div class="top-text_one">
+          <h2>Introducing an extensible editor</h2>
+          <p>
+            Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+            change the looks of a blog.
+          </p>
+        </div>
+        <div class="top-text_two">
+          <h2>Robust content management</h2>
+          <p>
+            Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+            by adding customized categories, sections, format, or flow. With this functionality, you're in full control.</p>
+        </div>
       </div>
     </div>
   </section>

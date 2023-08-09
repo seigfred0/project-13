@@ -46,30 +46,31 @@ p {
     font-size: 16px;
     font-family: 'Overpass', sans-serif;
     color: hsl(237, 23%, 32%);
-
 }
-
 
 a {
     text-decoration: none;
     color: white;
 }
+
+
 /* Main Section */
 
 main {
-    height: 75vh;
+    min-height: 75vh;
     border-bottom-left-radius: 20%;
     
     position: relative;
 
     background:linear-gradient(to bottom, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     z-index: 3;
-    overflow: hidden;
 
-    /* hsl(353, 100%, 62%), hsl(13, 100%, 72%)) */
+    /* overflow:hidden; */
+
+
 }
 
-.hero-section_background {
+/* .hero-section_background {
     position: absolute;
     width: 600px;
     height: 600px;
@@ -81,13 +82,14 @@ main {
     left: -25px;
     bottom: -150px;
     z-index: -1;
-}
+
+} */
 
 .hero-section_content {
-    margin-top: 6em;
+    margin-top: 4em;
     display: flex;
     flex-direction: column;
-    padding: 0 2em;
+    padding: 0 2.5em;
     gap: 1em;
 }
 
@@ -100,8 +102,6 @@ main {
 
 .hero-section_content h1 {
     font-family: 'Ubuntu', sans-serif;
-
-    
     font-weight: lighter;
 
 }
@@ -131,18 +131,53 @@ main {
 
 }
 
+
+@media (min-width: 800px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    main {
+        overflow: hidden;
+    }
+
+    .hero-section_background {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-image: url(images/bg-pattern-intro-mobile.svg);
+    background-size: cover;
+    transform: scale(2.25);
+    object-fit: contain;
+  
+    left: -25px;
+    bottom: -150px;
+    z-index: -1;
+
+    }
+}
+
 /* Navigation */
 
 .navigation {
     display: flex;
     align-items: center; 
     gap: 2em;
-
     padding: 2em;
+
+    
 }
 
 .nav-menu {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.nav-menu_links {
+    display: flex;
+    align-items: center;
     gap: 1em;
 }
 
@@ -226,36 +261,209 @@ main {
 }
 
 
+.nav-menu_cta {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    
+}
+
+.nav-menu_login {
+    color: white;
+    cursor: pointer;
+}
+
+.nav-menu_signup {
+    background-color: white;
+    color: hsl(356, 100%, 66%);
+    padding: 0.5em 1.5em;
+    border-radius: 40px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 30px;
+    height: 2.5px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+@media (max-width: 700px) {
+    .nav-menu {
+        display: none;
+    }
+
+
+
+    .navigation {
+        justify-content: space-between;
+        position: relative;
+        
+    }
+
+    .menu-icon {
+        display: inline-block;
+    }
+
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 2em;
+    
+        position: absolute;
+        top: 5em;
+        left: 0;
+        right: 0;
+        margin: auto;
+        
+        background-color: white;
+        border-radius: 7px;
+
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+
+    }
+
+
+    .nav-menu_links {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;       
+  
+
+    }
+
+    .nav-menu_cta {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+
+    .dropBtn {
+        color: black;
+    }
+
+    .dropBtn img {
+        background-color: red;
+
+    }
+
+
+    .nav-menu_cta {
+        margin-top: 2em;
+        padding-top: 2em;
+        gap: 1em;
+
+        border-top: 1px solid rgb(159, 159, 159);
+    }
+
+    .nav-menu_login {
+        color: black;
+    }
+
+    .nav-menu_signup {
+        background:linear-gradient(to right,hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        color: white;
+        padding: 0.5em 1.5em;
+        border-radius: 40px;
+    }
+
+    /* Drop Contents */
+   
+    .dropdown {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+
+    .dropdown button img {
+        max-width: 12px;
+    }
+
+    .dropdown button {
+        justify-content: center;
+    }
+   
+
+    .dropdown-content_three {
+        top: 1em;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        /* Changing this to relative made all the difference */
+        position: relative;
+
+
+        box-shadow: none;
+        background-color: rgb(239, 239, 239);
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content_two {
+        top: 1em;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-bottom: 1em;
+
+
+        /* Changing this to relative made all the difference */
+        position: relative;
+
+
+        box-shadow: none;
+        background-color: rgb(239, 239, 239);
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        top: 1em;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-bottom: 1em;
+
+        /* Changing this to relative made all the difference */
+        position: relative;
+
+
+        box-shadow: none;
+        background-color: rgb(239, 239, 239);
+        width: 100%;
+        text-align: center;
+    }
+    
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ /* display: none;
+        position: absolute;
+        top: 5em;
+    
+        padding: 2em 1.5em;
+        min-width: 160px;
+    
+        border-radius: 5px;
+        text-align: left;
+        background-color: white;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3); */
 
 
 
@@ -269,6 +477,9 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2.5em;
+
+    min-height: 100vh;
+
 }
 
 .top img {
@@ -285,6 +496,56 @@ main {
 
 .top-text p {
     margin-top: 1em;
+}
+
+.top-desktop .desktop {
+    display: none;
+}
+
+@media (min-width: 750px) {
+   .top-desktop {
+    display: flex;
+   }
+
+   .top-text {
+    text-align: left;
+    max-width: 500px
+   }
+
+   .top {
+    position: relative;
+    overflow: hidden;
+   }
+
+   .top-desktop img {
+    position: absolute;
+    
+    max-width: 450px;
+    right: -10em;
+    top: 0;
+    z-index: 20;
+   }
+
+   .top-desktop .mobile {
+    display: none;
+    }
+
+    .top-desktop .desktop {
+        display: flex;
+    }
+}
+
+@media (min-width: 850px) {
+    .top-desktop img {
+      max-width: 600px;
+    }
+
+    .top {
+        max-width: 1100px;
+
+        display: flex;
+    }
+
 }
 
 
