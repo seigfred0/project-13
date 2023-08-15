@@ -53,6 +53,9 @@ a {
     color: white;
 }
 
+.hover {
+    cursor: pointer;
+}
 
 /* Main Section */
 
@@ -70,20 +73,6 @@ main {
 
 }
 
-/* .hero-section_background {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background-image: url(images/bg-pattern-intro-mobile.svg);
-    background-size: cover;
-    transform: scale(2.25);
-    object-fit: contain;
-  
-    left: -25px;
-    bottom: -150px;
-    z-index: -1;
-
-} */
 
 .hero-section_content {
     margin-top: 4em;
@@ -121,6 +110,16 @@ main {
 
 }
 
+.main-btns1:hover {
+    background-color: rgb(149, 149, 149);
+    border-radius: 20px;
+    padding: 0.80em 1em;
+    color:  white;
+    font-weight: bolder;
+    border: none;
+
+}
+
 .main-btns2 {
     background-color: transparent;
     border-radius: 20px;
@@ -134,7 +133,7 @@ main {
 
 @media (min-width: 800px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     main {
@@ -142,18 +141,47 @@ main {
     }
 
     .hero-section_background {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background-image: url(images/bg-pattern-intro-mobile.svg);
-    background-size: cover;
-    transform: scale(2.25);
-    object-fit: contain;
-  
-    left: -25px;
-    bottom: -150px;
-    z-index: -1;
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background-image: url(images/bg-pattern-intro-mobile.svg);
+        background-size: cover;
+        transform: scale(2.25);
+        object-fit: contain;
+    
+        left: -25px;
+        bottom: -150px;
+        z-index: -1;
 
+    }
+
+    .main-btns1 {
+        padding: 0.80em 2em;
+    }
+
+    .main-btns1:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 0.80em 2em;
+        color:  white;
+        font-weight: bolder;
+        border: none;
+
+    }
+
+    .main-btns2 {
+        padding: 0.80em 2em;
+    }
+
+    .main-btns2:hover {
+        padding: 0.80em 2em;
+
+        background-color: white;
+        border-radius: 20px;
+        padding: 0.80em 2em;
+        color:  hsl(353, 100%, 62%);
+        font-weight: bolder;
+        border: white 1px solid;
     }
 }
 
@@ -276,9 +304,17 @@ main {
     cursor: pointer;
 }
 
+
 .nav-menu_signup {
     background-color: white;
     color: hsl(356, 100%, 66%);
+    padding: 0.5em 1.5em;
+    border-radius: 40px;
+}
+
+.nav-menu_signup:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color:  white;
     padding: 0.5em 1.5em;
     border-radius: 40px;
 }
@@ -450,18 +486,14 @@ main {
     
 }
 
+@media (min-width: 900px) {
+    .navigation {
+        padding: 2em 6em;
 
- /* display: none;
-        position: absolute;
-        top: 5em;
     
-        padding: 2em 1.5em;
-        min-width: 160px;
-    
-        border-radius: 5px;
-        text-align: left;
-        background-color: white;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3); */
+    }   
+}
+
 
 
 /* Top Section */
@@ -811,7 +843,7 @@ li {
         gap: 12em;
 
         text-align: left;
-        margin-right: 18em;
+        margin-right: 18    em;
     }
 
     .footer ul {
